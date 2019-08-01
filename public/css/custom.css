@@ -1,0 +1,1196 @@
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+div.h1_page_head {
+    font-size: 150%!important;
+    margin: 0 0 5px!important;
+    padding: 0!important;
+    font-weight: 700!important
+}
+
+.ui-drop-hover {
+    border: 1px solid #d3d3d3
+}
+
+#dragword div {
+    border: 1px solid #d3d3d3
+}
+
+#maindiv {
+    width: 500px;
+    height: 350px;
+    border: 2px solid #bbb
+}
+
+#dragword {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell
+}
+
+#dragword>div {
+    font-size: 30px;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    margin: 0 2.5px 3px;
+    border-radius: 4px;
+    display: inline-table
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.content_submit {
+    font-size: 18px;
+    color: #888;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 10px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    height: 90px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: .4s;
+    animation-name: animatetop;
+    animation-duration: .4s
+}
+
+.modal_submit {
+    display: none;
+    position: fixed;
+    z-index: 1006;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .4)
+}
+
+.modal_hint {
+    display: none;
+    position: absolute;    
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    height: 600px;
+    overflow: hidden;
+    transform: translate(-50%,-50%);
+    
+}
+
+.modal-hint {
+    position: relative;
+    background-color: white;
+    border: 4px solid #888;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: .4s;
+    animation-name: animatetop;
+    animation-duration: .4s;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.modal_correct,
+.modal_wrong,
+.modal_game_over,
+.modal_loading {
+    display: none;
+    position: absolute;
+    z-index: 1006;
+    padding-top: 100px;
+    left: 0px;
+    top: 0;
+    width: 794px;
+    height: 524px;
+    overflow: hidden;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 4px
+}
+
+.content_correct,
+.content_game_over,
+.content_wrong {
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    padding: 10% 15%;
+    border: 1px solid #888;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: .4s;
+    animation-name: animatetop;
+    animation-duration: .4s;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    border-radius: 20px !important; 
+    text-align: center
+}
+
+.close2 {
+    position: absolute;
+    background: url(../images/sprite.png) no-repeat;
+    width: 46px;
+    height: 34px;
+    top: -10px;
+    right: -15px
+}
+
+.close2:hover,
+.close2:focus {
+    text-decoration: none;
+    cursor: pointer
+}
+
+.close_hint {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: 700;
+    background: url(../images/sprite.png) no-repeat;
+    width: 46px;
+    height: 34px;
+    margin-top: -18px;
+    margin-right: -18px
+}
+
+.close_hint:hover,
+.close_hint:focus {
+    text-decoration: none;
+    cursor: pointer
+}
+
+.modal_score {
+    display: none;
+    position: fixed;
+    z-index: 1006;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .4)
+}
+
+.modal-score {
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 100%;
+    height: 290px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: .4s;
+    animation-name: animatetop;
+    animation-duration: .4s;
+    border-radius: 20px;
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.close1 {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: 700;
+    background: url(../images/sprite.png) no-repeat;
+    width: 46px;
+    height: 34px;
+    margin-top: -23px;
+    margin-right: -23px
+}
+
+.close1:hover,
+.close1:focus {
+    text-decoration: none;
+    cursor: pointer
+}
+
+.youwin {
+    color: #606060;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center
+}
+
+.row_submit {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center
+}
+
+.scored-lose {
+    color: #f32013;
+    font-size: 21px;
+    font-weight: 700;
+    margin: 28px 0 0 90px;
+    width: 40%;
+    text-align: center
+}
+
+.scored-win {
+    color: #4BB543;
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center
+}
+
+.iscored-lose {
+    color: #f32013;
+    font-size: 48px;
+    font-weight: 700;
+    width: 30%;
+    text-align: center;
+}
+
+.iscored-win {
+    color: #4BB543;
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#correct_answers {
+    width: 40%;
+    margin: 10px 0 0 60px;
+    font-size: 15px;
+    color: green;
+    font-weight: 700
+}
+
+#incorrect_answers {
+    width: 40%;
+    margin: 10px 0 0 60px;
+    font-size: 15px;
+    color: red;
+    font-weight: 700
+}
+
+#save-score-input {
+    width: 250px;
+    display: inline-block;
+    height: 35px;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #555;
+    vertical-align: middle;    
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+#submit_score {
+    
+}
+
+.score_btn1 {
+    padding: 7px 20px!important;
+    border-radius: 2px!important
+}
+
+
+
+#submitloader {
+    margin: -33px 0 0 406px;
+    float: left
+}
+
+#wrong_answer {
+    color: #e64924;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: Segoe UI!important
+}
+
+#correct_answer {
+    color: #4a9e0c;
+    font-size: 19px;
+    padding: 5px 0 30px;
+    font-weight: 500;
+    font-family: Segoe UI!important
+}
+
+#game_over {
+    color: #a94242;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: Segoe UI!important
+}
+
+#hint {
+    margin-top: 40px;
+    font-size: 16px
+}
+
+#main-game-wsr {
+    display: table
+}
+
+@media only screen and (min-width:1024px) and (max-width:5000px) {
+    #game_container_main {
+        border: 8px solid #f5f5f5;
+        width: 794px;
+        height: 525px;
+        background: #fff;
+        border-radius: 4px;
+        margin: auto;
+    }
+    #main-game-wsr {
+        width: 100%;
+        height: 508px;
+        position: relative;
+        float: left;
+        background: url(../images/pattern.png) no-repeat center center;
+        border-radius: 4px;
+        background-size: cover;
+        background-color: #fff;
+    }
+    .custom_btncontainer {
+        margin-top: -50px
+    }
+    .detailsbox {
+        margin-top: 10px
+    }
+    .score_bar {
+        font-size: 17px;
+        float: right;
+        height: 135px;
+        width: 100%;
+        border-radius: 4px;
+        padding: 5px 7px 0 14px
+    }
+    #score_box {
+        margin-top: 20px
+    }
+    #timer {
+        margin-top: 35px
+    }
+    div#game-options {
+        height: 128px;
+        float: right;
+        width: 100%;
+        margin: auto;
+        padding-top: 40px
+   
+    }
+    a.button_opt {
+        font-size: 16px;
+        color: #FFF!important;
+        font-weight: 700;
+        outline: none;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        transition: border-color .218s;       
+        border: solid 1px #dcdcdc;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 100%;
+        margin-bottom: 40px;
+        padding: 10px
+    }
+    .loading_wordscramble {
+        font-size: 25px;
+        font-style: italic;
+        color: #fff;
+        font-weight: 700;
+        position: absolute;
+        margin: 135px 270px
+    }
+}
+
+@media only screen and (min-width:980px) and (max-width:1023px) {
+    #game_container_main {
+        border: 8px solid #f5f5f5;
+        width: 794px;
+        height: 525px;
+        background: #fff;
+        border-radius: 4px;
+        margin: auto;
+    }
+    #main-game-wsr {
+        width: 100%;
+        height: 508px;
+        position: relative;
+        float: left;
+        background: url(../images/pattern.png) no-repeat center center;
+        border-radius: 4px;
+        background-size: cover;
+        background-color: #fff;
+    }
+    .custom_btncontainer {
+        margin-top: -10px
+    }
+    .detailsbox {
+        margin-top: 20px
+    }
+    .score_bar {
+        font-size: 17px;
+        float: right;
+        height: 135px;
+        width: 100%;
+        border-radius: 4px;
+        padding: 5px 7px 0 10px
+    }
+    #score_box {
+        margin-top: 20px
+    }
+    #timer {
+        margin-top: 35px
+    }
+    div#game-options {
+        height: 408px;
+        float: right;
+        width: 170px;
+        padding-top: 40px
+    }
+    a.button_opt {
+        font-size: 16px;
+        color: #6e6e6e!important;
+        font-weight: 700;
+        outline: none;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        transition: border-color .218s;
+        background: #cecece;
+        border: solid 1px #dcdcdc;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 100%;
+        margin-bottom: 40px;
+        padding: 10px
+    }
+    .loading_wordscramble {
+        font-size: 25px;
+        font-style: italic;
+        color: #fff;
+        font-weight: 700;
+        position: absolute;
+        margin: 135px 270px
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:979px) {
+    #game_container_main {
+        border: 8px solid #f5f5f5;
+        width: 703px;
+        height: 525px;
+        background: #fff;
+        border-radius: 4px;
+        margin: auto;
+    }
+    #main-game-wsr {
+        width: 100%;
+        height: 508px;
+        position: relative;
+        float: left;
+        background: url(../images/pattern.png) no-repeat center center;
+        border-radius: 4px;
+        background-size: cover;
+        background-color: #fff;
+    }
+    .custom_btncontainer {
+        margin-top: 5px
+    }
+    .detailsbox {
+        margin-top: 25px
+    }
+    .score_bar {
+        font-size: 17px;
+        float: right;
+        height: 125px;
+        width: 100%;        
+        border-radius: 4px;
+        padding: 4px 5px 0 10px
+    }
+    #score_box {
+        margin-top: 12px
+    }
+    #timer {
+        margin-top: 35px
+    }
+    div#game-options {
+        height: 408px;
+        float: right;
+        width: 124px;
+        padding-top: 40px
+    }
+    a.button_opt {
+        font-size: 16px;
+        color: #6e6e6e!important;
+        font-weight: 700;
+        outline: none;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        transition: border-color .218s;
+        background: #cecece;
+        border: solid 1px #dcdcdc;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 100%;
+        margin-bottom: 40px;
+        padding: 10px
+    }
+    #modal_correct,
+    #modal_wrong,
+    #modal_game_over {
+        width: 700px!important
+    }
+    .modal_loading {
+        width: 700px!important
+    }
+    .loading_wordscramble {
+        font-size: 25px;
+        font-style: italic;
+        color: #fff;
+        font-weight: 700;
+        position: absolute;
+        margin: 135px 230px
+    }
+}
+
+@media only screen and (min-width:640px) and (max-width:767px) {
+    #game_container_main {
+        border: 8px solid #f5f5f5;
+        width: 597px;
+        height: 432px;
+        background: #fff;
+        border-radius: 4px;
+        margin: auto;
+    }
+    #main-game-wsr {
+        width: 100%;
+        height: 416px;
+        position: relative;
+        float: left;
+        background: url(../images/pattern.png) no-repeat center center;
+        border-radius: 4px;
+        background-size: cover;
+        background-color: #fff;
+    }
+    .custom_btncontainer {
+        margin-top: -15px
+    }
+    .detailsbox {
+        margin-top: 20px
+    }
+    .score_bar {
+        font-size: 17px;
+        float: right;
+        height: 115px;
+        width: 100%;
+        border-radius: 4px;
+        padding: 2px 5px 0 10px
+    }
+    #score_box {
+        margin-top: 12px
+    }
+    #timer {
+        margin-top: 35px
+    }
+    div#game-options {
+        height: 343px;
+        float: right;
+        width: 124px;
+        padding-top: 40px
+    }
+    a.button_opt {
+        font-size: 16px;
+        color: #6e6e6e!important;
+        font-weight: 700;
+        outline: none;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        transition: border-color .218s;
+        background: #cecece;
+        border: solid 1px #dcdcdc;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 100%;
+        margin-bottom: 40px;
+        padding: 10px
+    }
+    .display_time {
+        display: inline
+    }
+    #modal_correct,
+    #modal_wrong,
+    #modal_game_over {
+        width: 595px;
+        height: 432px
+    }
+    #dragword>div {
+        padding: 15px!important
+    }
+    .modal_loading {
+        width: 594px!important;
+        height: 500px!important
+    }
+    .loading_wordscramble {
+        font-size: 25px;
+        font-style: italic;
+        color: #fff;
+        font-weight: 700;
+        position: absolute;
+        margin: 65px 190px
+    }
+}
+
+@media only screen and (min-width:568px) and (max-width:639px) {
+    #game_container_main {
+        border: 8px solid #f5f5f5;
+        width: 530px;
+        height: 395px;
+        background: #fff;
+        border-radius: 4px;
+        margin: auto;
+    }
+    #main-game-wsr {
+        width: 100%;
+        height: 380px;
+        position: relative;
+        float: left;
+        background: url(../images/pattern.png) no-repeat center center;
+        border-radius: 4px;
+        background-size: cover;
+        background-color: #fff;
+    }
+    .custom_btncontainer {
+        margin-top: -15px
+    }
+    .detailsbox {
+        margin-top: 20px
+    }
+    .score_bar {
+        font-size: 17px;
+        float: right;
+        height: 125px;
+        width: 100%;
+        border-radius: 4px;
+        padding: 13px 7px 0 10px
+    }
+    #score_box {
+        margin-top: 12px
+    }
+    #timer {
+        margin-top: 35px
+    }
+    div#game-options {
+        height: 292px;
+        float: right;
+        width: 124px;
+        padding-top: 40px
+    }
+    a.button_opt {
+        font-size: 16px;
+        color: #6e6e6e!important;
+        font-weight: 700;
+        outline: none;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        transition: border-color .218s;
+        background: #cecece;
+        border: solid 1px #dcdcdc;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 100%;
+        margin-bottom: 40px;
+        padding: 10px
+    }
+    .display_time {
+        display: inline
+    }
+    #modal_correct,
+    #modal_wrong,
+    #modal_game_over {
+        width: 530px!important;
+        height: 395px!important
+    }
+    #dragword div {
+        padding: 15px!important;
+        font-size: 25px!important
+    }
+    .modal_loading {
+        width: 528px!important;
+        height: 450px!important
+    }
+    .loading_wordscramble {
+        font-size: 25px;
+        font-style: italic;
+        color: #fff;
+        font-weight: 700;
+        position: absolute;
+        margin: 55px 160px
+    }
+    .heading_strategies {
+        width: 410px!important
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:567px) {
+    #game_container_main {
+        border: 8px solid #f5f5f5;
+        width: 442px;
+        height: 395px;
+        background: #fff;
+        border-radius: 4px;
+        margin: auto;
+    }
+    #main-game-wsr {
+        width: 100%;
+        height: 302px;
+        position: relative;
+        float: left;
+        background: url(../images/pattern.png) no-repeat center center;
+        border-radius: 4px;
+        background-size: cover;
+        background-color: #fff;
+        margin-top: 77px
+    }
+    .score_bar {
+        font-size: 17px;
+        position: absolute;
+        height: 70px;
+        width: 100%;
+        border-radius: 4px;
+        padding: 6px 8px 0 15px;
+        margin-left: 256px
+    }
+    #score_box {
+        margin-top: 12px
+    }
+    div#game-options {
+        height: 72px;
+        position: absolute;
+        width: 248px;
+        padding-top: 40px
+    }
+    a.button_opt {
+        font-size: 16px;
+        color: #6e6e6e!important;
+        font-weight: 700;
+        outline: none;
+        text-decoration: none;
+        position: relative;
+        display: block;
+        text-align: center;
+        transition: border-color .218s;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 100%;
+        padding: 5px 0;
+        margin-bottom: 5px
+    }
+    .display_time {
+        display: inline
+    }
+    #modal_correct,
+    #modal_wrong,
+    #modal_game_over {
+        width: 444px!important;
+        height: 395px!important
+    }
+    .loder {
+        margin-right: 2px!important
+    }
+    .content_correct,
+    .content_game_over,
+    .modal-content5 {
+        width: 433px!important
+    }
+    #dragword>div {
+        padding: 10px!important;
+        font-size: 25px!important
+    }
+    .custom_xs {
+        width: 100%
+    }
+    .modal_loading {
+        width: 440px!important;
+        height: 450px!important
+    }
+    .loading_wordscramble {
+        font-size: 25px;
+        font-style: italic;
+        color: #fff;
+        font-weight: 700;
+        position: absolute;
+        margin: 100px 165px
+    }
+    .close1 {
+        width: 35px!important;
+        margin-right: -13px!important
+    }
+}
+
+@media only screen and (min-width:360px) and (max-width:479px) {
+    #game_container_main {
+        border: 8px solid #f5f5f5;
+        width: 333px;
+        height: 420px;
+        background: #fff;
+        border-radius: 4px;
+        margin: auto;
+    }
+    #main-game-wsr {
+        width: 100%;
+        height: 327px;
+        position: relative;
+        float: left;
+        background: url(../images/pattern.png) no-repeat center center;
+        border-radius: 4px;
+        background-size: cover;
+        background-color: #fff;
+        margin-top: 77px
+    }
+    .custom_btncontainer {
+        margin-top: 15px
+    }
+    .detailsbox {
+        margin-top: 18px
+    }
+    .score_bar {
+        font-size: 17px;
+        position: absolute;
+        height: 70px;
+        width: 100%;
+        border-radius: 4px;
+        padding: 6px 8px 0 15px;
+        margin-left: 150px
+    }
+    #score_box {
+        margin-top: 12px
+    }
+    div#game-options {
+        height: 73px;
+        position: absolute;
+        width: 140px;
+        margin-left: 2px;
+        padding-top: 20px
+    }
+    a.button_opt {
+        font-size: 16px;
+        color: #fff!important;
+        font-weight: 700;
+        outline: none;
+        text-decoration: none;
+        position: relative;
+        display: block;
+        text-align: center;
+        transition: border-color .218s;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 100%;
+        padding: 5px 0;
+        margin-bottom: 5px
+    }
+    .li_display {
+        display: inline
+    }
+    .display_time {
+        display: inline
+    }
+    #modal_correct,
+    #modal_wrong,
+    #modal_game_over {
+        width: 330px!important;
+        height: 419px!important
+    }
+    .loder {
+        margin-right: 2px!important
+    }
+    .content_correct,
+    .content_game_over {
+        width: 310px!important;
+        margin-left: 15px;
+        padding: 10px 87px!important
+    }
+    .close2 {
+        margin-right: -104px
+    }
+    .modal-content5 {
+        width: 310px!important;
+        margin-left: 15px
+    }
+    .close_hint {
+        margin-right: -10px
+    }
+    #dragword div {
+        padding: 8px 0 4px!important;
+        font-size: 20px!important
+    }
+    .custom_xs {
+        width: 100%
+    }
+    .modal_loading {
+        width: 335px!important;
+        height: 420px!important
+    }
+    .loading_wordscramble {
+        font-size: 25px;
+        font-style: italic;
+        color: #fff;
+        font-weight: 700;
+        position: absolute;
+        margin: 100px 120px
+    }
+    .modal-score {
+        width: 290px!important;
+        height: 440px!important
+    }
+    #submitloader {
+        margin: -25px 0 0 208px!important
+    }
+    .close1 {
+        width: 35px!important;
+        margin-right: -13px!important
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width:359px) {
+    #main-game-wsr {
+        width: 100%;
+        height: 317px;
+        position: relative;
+        float: left;
+        background: url(../images/pattern.png) no-repeat center center;
+        border-radius: 4px;
+        background-size: cover;
+        background-color: #fff;
+        margin-top: 77px
+    }
+    .custom_btncontainer {
+        margin-top: 15px
+    }
+    .detailsbox {
+        margin-top: 0
+    }
+    .score_bar {
+        font-size: 17px;
+        position: absolute;
+        height: 70px;
+        width: 100%;
+        border-radius: 4px;
+        padding: 6px 8px 0 15px;
+        margin-left: 112px
+    }
+    #score_box {
+        margin-top: 12px
+    }
+    #game_container_main {
+        border: 8px solid #f5f5f5;
+        width: 298px;
+        height: 410px;
+        background: #fff;
+        border-radius: 4px;
+        margin: auto;
+    }
+    div#game-options {
+        height: 81px;
+        position: absolute;
+        width: 105px
+    }
+    a.button_opt {
+        font-size: 16px;
+        color: #fff!important;
+        font-weight: 700;
+        outline: none;
+        text-decoration: none;
+        position: relative;
+        display: block;
+        text-align: center;
+        transition: border-color .218s;
+        background: #cecece;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        margin-right: 10px;
+        width: 100%;
+        padding: 5px 0;
+        margin-bottom: 5px
+    }
+    .display_time {
+        display: inline
+    }
+    #modal_correct,
+    #modal_wrong,
+    #modal_game_over {
+        width: 297px!important;
+        height: 409px!important
+    }
+    #dragword {
+        width: 290px!important;
+        height: 310px!important
+    }
+    .loder {
+        margin-right: 2px!important
+    }
+    .content_correct,
+    .content_game_over {
+        width: 260px!important;
+        margin-left: 15px;
+        padding: 10px 70px!important
+    }
+    .modal-content5 {
+        width: 260px!important;
+        margin-left: 15px
+    }
+    .close2 {
+        margin-right: -92px
+    }
+    #dragword>div {
+        padding: 10px!important;
+        font-size: 20px!important
+    }
+    .custom_xs {
+        width: 100%
+    }
+    .modal_loading {
+        width: 298px!important;
+        height: 410px!important
+    }
+    .loading_wordscramble {
+        font-size: 25px;
+        font-style: italic;
+        color: #fff;
+        font-weight: 700;
+        position: absolute;
+        margin: 73px 103px
+    }
+    .modal-score {
+        width: 290px!important;
+        height: 440px!important
+    }
+    #submitloader {
+        margin: -25px 0 0 208px!important;
+        float: left
+    }
+    .close1 {
+        width: 35px!important;
+        margin-right: -13px!important
+    }
+}
