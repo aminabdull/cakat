@@ -185,11 +185,11 @@ div.h1_page_head {
     padding-top: 100px;
     left: 0px;
     top: 0;
-    width: 794px;
+    width: 100%;
     height: 524px;
     overflow: hidden;
     background-color: #000;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 4px
 }
 
@@ -650,14 +650,6 @@ div.h1_page_head {
         margin-bottom: 40px;
         padding: 10px
     }
-    #modal_correct,
-    #modal_wrong,
-    #modal_game_over {
-        width: 700px!important
-    }
-    .modal_loading {
-        width: 700px!important
-    }
     .loading_wordscramble {
         font-size: 25px;
         font-style: italic;
@@ -734,18 +726,8 @@ div.h1_page_head {
     .display_time {
         display: inline
     }
-    #modal_correct,
-    #modal_wrong,
-    #modal_game_over {
-        width: 595px;
-        height: 432px
-    }
     #dragword>div {
         padding: 15px!important
-    }
-    .modal_loading {
-        width: 594px!important;
-        height: 500px!important
     }
     .loading_wordscramble {
         font-size: 25px;
@@ -823,19 +805,9 @@ div.h1_page_head {
     .display_time {
         display: inline
     }
-    #modal_correct,
-    #modal_wrong,
-    #modal_game_over {
-        width: 530px!important;
-        height: 395px!important
-    }
     #dragword div {
         padding: 15px!important;
         font-size: 25px!important
-    }
-    .modal_loading {
-        width: 528px!important;
-        height: 450px!important
     }
     .loading_wordscramble {
         font-size: 25px;
@@ -908,18 +880,11 @@ div.h1_page_head {
     .display_time {
         display: inline
     }
-    #modal_correct,
-    #modal_wrong,
-    #modal_game_over {
-        width: 444px!important;
-        height: 395px!important
-    }
     .loder {
         margin-right: 2px!important
     }
     .content_correct,
-    .content_game_over,
-    .modal-content5 {
+    .content_game_over {
         width: 433px!important
     }
     #dragword>div {
@@ -1015,19 +980,11 @@ div.h1_page_head {
     .display_time {
         display: inline
     }
-    #modal_correct,
-    #modal_wrong,
-    #modal_game_over {
-        width: 330px!important;
-        height: 419px!important
-    }
     .loder {
         margin-right: 2px!important
     }
     .content_correct,
     .content_game_over {
-        width: 310px!important;
-        margin-left: 15px;
         padding: 10px 87px!important
     }
     .close2 {
@@ -1135,12 +1092,6 @@ div.h1_page_head {
     }
     .display_time {
         display: inline
-    }
-    #modal_correct,
-    #modal_wrong,
-    #modal_game_over {
-        width: 297px!important;
-        height: 409px!important
     }
     #dragword {
         width: 290px!important;
